@@ -1,4 +1,6 @@
+//apply plugin: 'com.novoda.bintray-release'
 apply plugin: 'com.android.library'
+//apply plugin: 'maven-publish'
 
 ext{
     bintrayRepo = 'maven-math'
@@ -13,7 +15,7 @@ ext{
     siteUrl = 'https://github.com/saindane99/Operations'
     gitUrl = 'https://github.com/saindane99/Operations.git'
 
-    libraryVersion = '1.0.0'
+    libraryVersion = '1.0.2'
 
     developerId = 'gladiator'
     developerName = 'Shailesh Saindane'
@@ -24,6 +26,36 @@ ext{
     licenseUrl = 'http://www.apache.org/licenses/LICENSE-2.0.txt'
     allLicenses = ["Apache-2.0"]
 }
+/*publish {
+
+    def groupProjectID = 'com.mathoperations.arithmetics'
+    def artifactProjectID = 'equations'
+    def publishVersionID = '1.0.0'
+
+    userOrg = ''
+    repoName = 'maven-math'
+    groupId = groupProjectID
+    artifactId = artifactProjectID
+    publishVersion = publishVersionID
+    desc = 'Arithmetic Operations.'
+    website = 'https://github.com/saindane99/Operations'
+
+
+    publishing {
+        publications {
+            MyPub(MavenPublication) {
+                groupId groupProjectID
+                artifactId artifactProjectID
+                version publishVersionID
+
+                //don't forget to add bundleRelease
+                artifact bundleRelease
+
+            }
+        }
+    }
+    publications = ['MyPub']
+}*/
 android {
     compileSdkVersion 27
     defaultConfig {

@@ -1,1 +1,1 @@
-include ':app', ':arithmetics'
+include ':app', ':equations'
